@@ -1,0 +1,170 @@
+/* General Styles */
+.navbar1 {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #007bff;
+  /* Blue theme */
+  padding: 1rem;
+  position: fixed;
+  /* Keep navbar fixed at the top */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* Ensure it stays above other content */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 50px;
+  margin-right: 100px;
+}
+
+.nav-buttons a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-buttons a.active {
+  background-color: #86a2c1;
+}
+
+.nav-buttons a:hover {
+  background-color: #0056b3;
+}
+
+.main-log {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px);
+  /* Adjust height considering the navbar */
+  width: 100%;
+  overflow: hidden;
+  padding-top: 60px;
+  /* Ensure content doesn't hide under navbar */
+  position: fixed;
+}
+
+.log_head {
+  font-size: 2.5rem;
+  /* Adjust font size for better scaling */
+  font-weight: 700;
+  color: #007bff;
+  position: absolute;
+  left: 520px;
+  top: 140px;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  /* Ensure it doesn't stretch too wide on larger screens */
+  border: 3px solid #007bff;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.butt_log {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.butt_log:hover {
+  background-color: #0056b3;
+}
+
+.para_gh {
+  font-size: 1rem;
+  /* Use rem units for consistency */
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .log_head {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #007bff;
+    position: absolute;
+    left: 190px;
+    top: 100px;
+  }
+
+  .login-form {
+    width: 90%;
+    max-width: 350px;
+    padding: 15px;
+  }
+
+  .para_gh {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .nav-buttons {
+    display: flex;
+    gap: 5px;
+    margin-right: 20px;
+  }
+
+  .log_head {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #007bff;
+    position: absolute;
+    left: 10px;
+    top: 110px;
+  }
+
+  .login-container {
+    width: 95%;
+  }
+
+  .login-form {
+    width: 95%;
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  .para_gh {
+    font-size: 0.8rem;
+  }
+}
